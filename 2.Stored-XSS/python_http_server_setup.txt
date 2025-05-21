@@ -1,0 +1,5 @@
+ Step 1: Open terminal
+ Step 2: Run this command
+python -m http.server 3000
+
+ Step 3: Wait for incoming GET request with cookie in query string

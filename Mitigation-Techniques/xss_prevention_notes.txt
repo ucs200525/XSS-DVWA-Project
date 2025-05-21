@@ -1,0 +1,45 @@
+XSS Prevention Techniques
+
+1. Validate User Input
+
+    Only allow safe characters and formats (like email, numbers).
+    Block unexpected HTML tags, scripts, and special characters.
+
+2. Escape Data Before Displaying
+
+    Convert special characters to safe codes (`<` → `&lt;`) before showing on the web page.
+    Use proper encoding based on context: HTML, JavaScript, or URLs.
+
+3. Use a Strong Content Security Policy (CSP)
+
+    Add CSP headers to control which scripts can run on your website.
+    Block inline scripts and disallow unknown sources.
+
+4. Secure Cookies
+
+    Set cookies with `HttpOnly` so JavaScript can't read them.
+    Add `Secure` and `SameSite` attributes to limit cookie misuse.
+
+5. Use Safe Frontend Frameworks
+
+    Frameworks like React, Angular, and Vue auto-escape output to block XSS.
+    Avoid turning off their built-in protections.
+
+6. Clean User-Generated HTML
+
+    Use libraries like `DOMPurify` to safely filter user-submitted HTML content.
+    Don’t trust raw HTML from users.
+
+7. Avoid Unsafe JavaScript Methods
+
+    Don’t use `innerHTML`, `eval()`, `document.write()` unless absolutely needed.
+    Use `textContent`, `createElement`, and other safer alternatives.
+
+8. Test Your Site for Vulnerabilities
+
+    Regularly scan your app with tools like:
+      Burp Suite
+      OWASP ZAP
+      Browser Dev Tools
+     
+
