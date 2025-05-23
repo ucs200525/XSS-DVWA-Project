@@ -1,0 +1,1 @@
+http://localhost:8080/vulnerabilities/xss_d/?default=<script>alert('DOM XSS! document.cookie')</script>
